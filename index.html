@@ -1,11 +1,164 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="../assets/img/Mulanay_Logo.jpg" type="image/gif" sizes="16x16" />
+    <title>Login | Mulanay Home Town</title>
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        .global-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+        }
+
+        form {
+            padding-top: 10px;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        .card-title {
+            font-weight: 300;
+        }
+
+        .btn {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+
+        .login-form {
+            width: 330px;
+            margin: 20px;
+        }
+
+        .sign-up {
+            text-align: center;
+            padding: 20px 0 0;
+        }
+
+        .alert {
+            margin-bottom: -30px;
+            font-size: 13px;
+            margin-top: 20px;
+        }
+
+        .boxBTN .btn {
+            width: 100%;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+            .boxBTN .btn:focus,
+            .btnConfirm:focus,
+            .btnClose:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+        #btnConfirm a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .mLogo {
+            border-radius: 50%;
+            border: 1px solid #ffffff;
+        }
+    </style>
 </head>
 <body>
-    <h1> Mulanay Home Town </h1>
+
+    <div class="global-container">
+        <div class="card login-form">
+            <div class="card-body">
+                <div class="d-flex mb-4">
+                    <div class="p-2"><img src="../assets/img/Mulanay_Logo.jpg" class="img-fluid mLogo" width="40" /></div>
+                    <div class="p-2 flex-grow-1">
+                        <h3>Mulanay Quezon</h3>
+                    </div>
+                </div>
+                <small>Sign in to start your session</small>
+                <div class="card-text">
+                    <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
+                    <form action="Mulanay.html" method="post">
+                        <!-- to error: add class "has-danger" -->
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control form-control-sm" id="exampleInputPassword1">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block" style="width: 100%">Sign in</button>
+
+                        <div class="sign-up">
+                            <a href="#" style="font-size:12px;">Forgot password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="container-login">
+        <div class="card shadow" style="background-color: #3d4459;">
+            <div class="card-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container">
+                                <div class="d-flex mb-4">
+                                    <div class="p-2"><img src="../assets/img/Mulanay_Logo.jpg" class="img-fluid mLogo" width="40" /></div>
+                                    <div class="p-2 flex-grow-1">
+                                        <h2>Mulanay Quezon</h2>
+                                    </div>
+                                </div>
+                                <p class="mb-3">Sign in to start your session</p>
+                                <div class="form-group mb-2">
+                                    <label class="small">Username</label>
+                                    <input type="text" class="form-control" />
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label class="small">Password</label>
+                                    <input type="password" class="form-control" />
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="boxBTN">
+                                            <button id="btnUAT" class="btn btn-outline-light border">Secure Login</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
