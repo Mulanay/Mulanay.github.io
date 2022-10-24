@@ -85,7 +85,7 @@
         }
         .navbar-nav li a {
             color: #000000;
-            margin-left: 30px;
+            margin-left: 20px;
         }
         .navbar-nav li a:hover {
             color:  #aa2c22;
@@ -103,6 +103,11 @@
         .navbar-nav.collapsed {
             padding: 15px;
         } 
+        .logouBtn {
+            position: absolute;
+            right: 30;
+            padding-top: 6px;
+        }
         .logouBtn a {
             color: #000000;
             text-decoration: none;
@@ -171,13 +176,13 @@
     <nav class="navbar navbar-expand-sm sticky-top navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand sysTitle d-flex" href="mulanay.html">
-                <img src="./assets/img/Mulanay_Logo.jpg" alt="Avatar Logo" style="width:60px;" class="rounded-pill" />
-                <div class="d-flex flex-column"> 
-                    <div class="p-2">Municipality of Mulanay 
+                <img src="./assets/img/Mulanay_Logo.jpg" alt="Avatar Logo" width="50px" height="50px" class="rounded-pill" />
+                <div class="d-flex flex-column" style="margin-left: 10px;"> 
+                    <div>Municipality of Mulanay 
                         <br> <small class="smallQP">Quezon Province</small>
                     </div>                   
                 </div>
-                <img src="./assets/img/aaHead.jpg" alt="Avatar Logo" style="width:100px;" class="rounded-pill" />
+                <img src="./assets/img/aaHead.jpg" alt="Avatar Logo" height="50px" class="rounded-pill" />
             </a>            
             <button id="collapsedClick" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -193,11 +198,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#Contact">Contact</a>
                     </li>
-                </ul>
                 <div class="logouBtn">
                     <!-- <a href="https://mulanay.github.io/"><i class="fa fa-power-off small text-black"></i>&nbsp;Logout</a> -->
-                    <a href="index.html"><i class="fa fa-power-off small"></i>&nbsp;Logout</a>
+                    <a id="logoutBtn" href="#logout"><i class="fa fa-power-off small"></i>&nbsp;Logout</a>
                 </div>
+                </ul>
             </div>            
         </div>
     </nav>
@@ -281,7 +286,7 @@
     <!-- Footer Section -->
     <footer class="footer">
         <div class="row container-fluid p-5 text-white">
-            <div class="col-md-4">
+            <div class="col-md">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><i class="fa fa-caret-right"></i>&nbsp;First Class Municipality</li>
                     <li class="nav-item"><i class="fa fa-caret-right"></i>&nbsp;REGION IV-A (CALABARZON)</li>
@@ -290,7 +295,7 @@
                 </ul>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md">
                 <i>Mulanay, officially the Municipality of Mulanay, is a 1st class municipality in the province of Quezon, Philippines. According to the 2020 census, it has a population of 55,576 people.</i>
 
                 <br>
@@ -311,8 +316,8 @@
                 </div>
             </div>
             
-            <div class="col-md-4" style="text-align:right; float:right">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248253.62176131582!2d122.3223672858823!3d13.53787107530404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a2565f81663b1f%3A0xf9e265b22ed4ba2c!2sMulanay%2C%20Quezon!5e0!3m2!1sen!2sph!4v1666070875701!5m2!1sen!2sph" style="border-radius: 10px; height: 100%; width: 100%;" allow="fullscreen" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="col-md">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248253.62176131582!2d122.3223672858823!3d13.53787107530404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a2565f81663b1f%3A0xf9e265b22ed4ba2c!2sMulanay%2C%20Quezon!5e0!3m2!1sen!2sph!4v1666070875701!5m2!1sen!2sph" style="border-radius: 10px; max-height: 100%; max-width: 1000px;" allow="fullscreen" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         <div class="container p-3 text-center text-white">
@@ -324,6 +329,8 @@
 
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script type="text/javascript">
         jQuery(function ($) {
@@ -342,6 +349,23 @@
             $("#btnLearn").click(function () {
                 alert('Soon!');
                 //window.open('test.html', '_blank');
+            });
+
+            $("#logoutBtn").click(function () {
+                Swal.fire
+                ({
+                    title: 'Logout Session!',
+                    icon: 'question',
+                    html:
+                    'Are you sure you want to logout?',
+                    focusConfirm: false,
+                    showCancelButton: true,
+                    confirmButtonText:
+                        '<a href="index.html" class="text-white" style="text-decoration:none"> ' +
+                            'Yes' +
+                        '</a>',
+                    confirmButtonAriaLabel: 'Thumbs up, great!'
+                })
             });
         });
 

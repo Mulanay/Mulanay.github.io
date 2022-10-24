@@ -4,27 +4,64 @@ $(document).ready(function(){
         var password = $("#userPass").val();
         if (username == "")
         {
-            alert("Please input username.");  
+            Swal.fire
+            (
+                'Invalid username',
+                'Please input username.',
+                'warning'
+            )
+            //alert("Please input username.");  
         }
         else if (password == "")
         {
-            alert("Please input password.");  
+            Swal.fire
+            (
+                'Invalid password',
+                'Please input password.',
+                'warning'
+            )
+            //alert("Please input password.");  
         }
         else if (username != "admin")
         {
-            alert("Invalid username or password.");   
+            Swal.fire 
+            (
+                'Invalid username or password.',
+                'Please input correct username and password.',
+                'warning'
+            )
+            //alert("Invalid username or password.");   
             document.getElementById('userNam').value = "";
             document.getElementById('userPass').value = "";         
         }
         else if (password != "admin")
         {
-            alert("Invalid username.");  
+            Swal.fire 
+            (
+                'Invalid username or password.',
+                'Please input correct username and password.',
+                'warning'
+            )
+            //alert("Invalid username.");  
             document.getElementById('userNam').value = "";
             document.getElementById('userPass').value = "";          
         }
         else {
-            alert("Success.");  
-            window.location.href = "mulanay.html";
+            Swal.fire
+            ({
+                title: 'Success!',
+                icon: 'success',
+                html:
+                  'Successfully log-in.',
+                focusConfirm: false,
+                confirmButtonText:
+                    '<a href="mulanay.html" class="text-white" style="text-decoration:none"> ' +
+                        '<i class="fa fa-thumbs-up"></i> Great! ' +
+                    '</a>',
+                confirmButtonAriaLabel: 'Thumbs up, great!'
+              })
+            //alert("Success.");  
+            //window.location.href = "mulanay.html";
         }                
     });
 });
