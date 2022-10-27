@@ -5,31 +5,43 @@ $(document).ready(function(){
         if (username == "")
         {
             Swal.fire
-            (
-                'Invalid username',
-                'Please input username.',
-                'warning'
-            )
+            ({
+                title: 'Invalid username!',
+                icon: 'warning',
+                html:
+                  'Please input username.',
+                focusConfirm: false,
+                showConfirmButton: true,
+                confirmButtonColor: '#aa2c22'
+              })
             //alert("Please input username.");  
         }
         else if (password == "")
         {
             Swal.fire
-            (
-                'Invalid password',
-                'Please input password.',
-                'warning'
-            )
+            ({
+                title: 'Invalid password!',
+                icon: 'warning',
+                html:
+                  'Please input password.',
+                focusConfirm: false,
+                showConfirmButton: true,
+                confirmButtonColor: '#aa2c22'
+              })
             //alert("Please input password.");  
         }
         else if (username != "admin")
         {
-            Swal.fire 
-            (
-                'Invalid username or password.',
-                'Please input correct username and password.',
-                'warning'
-            )
+            Swal.fire
+            ({
+                title: 'Invalid username or password!',
+                icon: 'warning',
+                html:
+                  'Please input correct username and password.',
+                focusConfirm: false,
+                showConfirmButton: true,
+                confirmButtonColor: '#aa2c22'
+              })
             //alert("Invalid username or password.");   
             document.getElementById('userNam').value = "";
             document.getElementById('userPass').value = "";         
@@ -37,11 +49,15 @@ $(document).ready(function(){
         else if (password != "admin")
         {
             Swal.fire 
-            (
-                'Invalid username or password.',
-                'Please input correct username and password.',
-                'warning'
-            )
+            ({
+                title: 'Invalid username or password!',
+                icon: 'warning',
+                html:
+                  'Please input correct username and password.',
+                focusConfirm: false,
+                showConfirmButton: true,
+                confirmButtonColor: '#aa2c22'
+              })
             //alert("Invalid username.");  
             document.getElementById('userNam').value = "";
             document.getElementById('userPass').value = "";          
@@ -52,13 +68,13 @@ $(document).ready(function(){
                 title: 'Success!',
                 icon: 'success',
                 html:
-                  'Successfully log-in.',
+                  'You are logged in now.',
                 focusConfirm: false,
+                confirmButtonColor: '#4ba938',
                 confirmButtonText:
                     '<a href="mulanay.html" class="text-white" style="text-decoration:none"> ' +
-                        '<i class="fa fa-thumbs-up"></i> Great! ' +
-                    '</a>',
-                confirmButtonAriaLabel: 'Thumbs up, great!'
+                        'Ok' +
+                    '</a>'
               })
             //alert("Success.");  
             //window.location.href = "mulanay.html";
