@@ -113,6 +113,20 @@ body::-webkit-scrollbar-track-piece:end {
 /* End Navigation Section */
 
 /* Content Section */
+h1.header {
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Clarendon', 'sans-serif';
+    text-transform: uppercase;
+}
+.mayorSection {
+    color: #ffffff;
+    padding: 20px;
+    background-color: #4785d2;
+}
+#btnLearn {
+    border: 2px solid #ffffff;
+}
 .roundedImg {
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -178,7 +192,8 @@ body::-webkit-scrollbar-track-piece:end {
 
 /* Media Screen Section*/
 @media screen and (max-width: 520px) {
-    .mulanayLogo {
+    .mulanayLogo,
+    .aaLogo {
         display: none;
     }
     .vr {
@@ -186,3 +201,8 @@ body::-webkit-scrollbar-track-piece:end {
     }
 }
 /* End Media Screen Section*/
+
+@font-face {
+    font-family: 'Clarendon';
+    src: url('../assets/font/Clarendon-Regular.ttf') format('truetype');
+}

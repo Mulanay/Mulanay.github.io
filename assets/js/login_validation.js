@@ -72,7 +72,7 @@ $(document).ready(function(){
                 focusConfirm: false,
                 confirmButtonColor: '#4ba938',
                 confirmButtonText:
-                    '<a href="mulanay.html" class="text-white" style="text-decoration:none"> ' +
+                    '<a id="validButton" href="mulanay.html" class="text-white" style="text-decoration:none"> ' +
                         'Ok' +
                     '</a>'
               })

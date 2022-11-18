@@ -13,7 +13,7 @@
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
     <div class="container-fluid topText-Header">  
         <div class="d-flex justify-content-between small">
-            <div class="p-2">The Official Website of The Municipality</div>
+            <div class="p-2">The Official Website of Mulanay</div>
             <div class="p-2 logouBtn"><a id="logoutBtn" href="#logout"><i class="fa fa-power-off small"></i>&nbsp;Logout</a></div>
         </div>
     </div>
@@ -33,14 +33,14 @@
                             </div>                   
                         </div>
                     </div>
-                    <div class="p-2"><img src="./assets/img/aaHead.jpg" alt="Avatar Logo" height="50px" class="rounded-pill" /></div>
+                    <div class="p-2 aaLogo"><img src="./assets/img/aaHead.jpg" alt="Avatar Logo" height="50px" class="rounded-pill" /></div>
                 </div>
             </a>            
             <button id="collapsedClick" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="vr"></div>
             <div class="collapse navbar-collapse" id="mynavbar">
+                <div class="vr"></div>
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#Home">Home</a>
@@ -61,57 +61,60 @@
     <!-- End Navigation -->
 
     <!-- Page Content -->
-    <div class="container-fluid mt-3">
+    <div class="container-fluid">
         <!-- Home Section -->
-        <div id="Home" class="container-fluid">
-            <!-- Carousel -->
-            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <div id="Home" class="container-fluid pt-3">
+            <div class="row">
+                <div class="col-md-8">
+                    <!-- Carousel -->
+                    <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-                <!-- Indicators/dots -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                        <!-- Indicators/dots -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                        </div>
+            
+                        <!-- The slideshow/carousel -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/img/aa.jpg" class="d-block" style="width:100%">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/img/beach.jpg" class="d-block" style="width:100%">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/img/aa.jpg" style="width:100%">
+                            </div>
+                        </div>
+            
+                        <!-- Left and right controls/icons -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <!-- End Carousel -->
                 </div>
-      
-                <!-- The slideshow/carousel -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./assets/img/aa.jpg" class="d-block" style="width:100%">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./assets/img/beach.jpg" class="d-block" style="width:100%">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./assets/img/aa.jpg" style="width:100%">
-                    </div>
-                </div>
-      
-                <!-- Left and right controls/icons -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+                <div class="col-md-4"></div>
             </div>
-            <!-- End Carousel -->
 
             <!-- Mayor Section -->
-            <div class="container-fluid border mt-3">
-                <h1 class="text-center m-3" style="font-weight:900">FROM THE MAYOR'S DESK</h1>
+            <div class="container-fluid mayorSection mt-3">
+                <h1 class="text-center m-3 header">FROM THE MAYOR'S DESK</h1>
                 <div class="row p-5">
                     <div class="col-md-8 mb-3">
                         <h3 style="font-weight:800">HON. MAYOR ARISTOTLE LIM AGUIRRE</h3>
 
-                        <br>
-
-                        <p>“Ang lahat ng ating nagawa at gagawin pa sa mga susunod na taon ay bunga ng hindi nagbabagong pangako natin sa isa’t isa – na lagi tayong magtutulungan para sa kabutihan ng lahat. I am proud of our accomplishments as a province, because these are the results of our collective efforts and commitment for positive change.”</p>
+                        <p style="margin-top: 30px;">“Ang lahat ng ating nagawa at gagawin pa sa mga susunod na taon ay bunga ng hindi nagbabagong pangako natin sa isa’t isa – na lagi tayong magtutulungan para sa kabutihan ng lahat. I am proud of our accomplishments as a province, because these are the results of our collective efforts and commitment for positive change.”</p>
 
                         <br>
 
-                        <button id="btnLearn" class="btn btn-outline-light border text-dark">
-                            <i class="fa fa-search text-muted"></i>&nbsp;<small>LEARN MORE ABOUT MAYOR ARISTOTLE</small>
+                        <button id="btnLearn" class="btn btn-outline-light">
+                            <i class="fa fa-search"></i>&nbsp;<small>LEARN MORE ABOUT MAYOR ARISTOTLE</small>
                         </button>
                     </div>
                     <div class="col-md-4">
