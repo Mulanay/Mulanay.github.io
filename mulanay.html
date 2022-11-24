@@ -19,8 +19,8 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-sm sticky-top navbar-light">
-        <div class="container-fluid">
+    <nav id="header" class="navbar navbar-expand-sm sticky-top navbar-light">
+        <div class="container navContent">
             <a class="navbar-brand" href="mulanay.html">
                 <div class="d-flex justify-content-start">
                     <div class="p-2 mulanayLogo"><img src="./assets/img/Mulanay_Logo.jpg" width="50px" height="50px" class="rounded-pill" /></div>
@@ -43,7 +43,7 @@
                 <div class="vr"></div>
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#Home">Home</a>
+                        <a class="nav-link homeLink" href="#Home">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#Community">Community</a>
@@ -61,9 +61,9 @@
     <!-- End Navigation -->
 
     <!-- Page Content -->
-    <div class="container-fluid">
+    <div class="container">
         <!-- Home Section -->
-        <div id="Home" class="container-fluid pt-3">
+        <div id="Home" class="container-fluid">
             <div class="row">
                 <div class="col-md-8">
                     <!-- Carousel -->
@@ -201,45 +201,11 @@
     <!-- End Page Content -->
 
     <!-- Footer Section -->
-    <footer class="footer">
-        <!-- <div class="row container-fluid p-5 text-white">
-            <div class="col-md">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><i class="fa fa-caret-right"></i>&nbsp;First Class Municipality</li>
-                    <li class="nav-item"><i class="fa fa-caret-right"></i>&nbsp;REGION IV-A (CALABARZON)</li>
-                    <li class="nav-item"><i class="fa fa-caret-right"></i>&nbsp;Mulanay Municipal Compound, Barangay 1 (Pob.), Mulanay, Quezon</li>
-                    <li class="nav-item"><i class="fa fa-caret-right"></i>&nbsp;arisaguirresocmed2022@gmail.com</li>
-                </ul>
-            </div>
-
-            <div class="col-md">
-                <i>Mulanay, officially the Municipality of Mulanay, is a 1st class municipality in the province of Quezon, Philippines. According to the 2020 census, it has a population of 55,576 people.</i>
-
-                <br>
-
-                <div class="d-flex p-3">
-                    <div class="p-2 faSoc">
-                        <a href="#" class="fa fa-facebook"></a>
-                    </div>
-                    <div class="p-2 faSoc">
-                        <a href="#" class="fa fa-twitter border"></a>
-                    </div>
-                    <div class="p-2 faSoc">
-                        <a href="#" class="fa fa-google"></a>
-                    </div>
-                    <div class="p-2 faSoc">
-                        <a href="#" class="fa fa-youtube"></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md">
-                
-            </div>
-        </div> -->
-        <div class="container text-center">
-            <pre>&copy; Copyright <label id="lblYear"></label> | Official Website of Mulanay Quezon.</pre>
-            <pre>All Rights Reserved.</pre>
+    <footer class="footer bg-gray-300 mt-50 border border-gray-10 py-35">
+        <div class="container text-center pt-2">
+            <p>
+                <pre>&copy; Copyright <label id="lblYear"></label> | Official Website of Mulanay Quezon. <br> All rights reserved</pre>
+            </p>
         </div>
     </footer>
     <!-- End Footer Section -->
@@ -262,6 +228,17 @@
             $("#btnLearn").click(function () {
                 alert('Soon!');
                 //window.open('test.html', '_blank');
+            });
+
+            $(window).scroll(function () {
+                var scrollh = $(this).scrollTop();
+                if (scrollh == 0) {
+                    $(".navbar").removeClass("sticky_top_fixed");
+                    $(".homeLink").removeClass("active");
+                } else {
+                    $(".navbar").addClass("sticky_top_fixed");
+                    $(".homeLink").addClass("active");
+                }
             });
 
             $("#logoutBtn").click(function () {

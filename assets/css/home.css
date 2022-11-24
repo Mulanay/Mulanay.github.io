@@ -31,14 +31,21 @@ body::-webkit-scrollbar-track-piece:end {
 /* End Body Section */
 
 /* Navigation Section */
-.sticky-top {
-    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
-    transition: all 0.6s ease;
+#header {
+    background-color: #ffffff;
+    z-index: 11111;
+    position: -webkit-sticky;
+    position: sticky;
+}
+#header.sticky_top_fixed {
+    box-shadow: 0 7px 6px rgb(0 0 0 / 11%);
+    background: #fff!important;
+    transition: ease 0.6s ease;
 }
 
 .navbar {
     margin-top: -1;
-    background-color: #ffffff;
+    background-color: #ffffff !important;
 }
 .topText-Header {
     color: #ffffff;
@@ -113,6 +120,11 @@ body::-webkit-scrollbar-track-piece:end {
 /* End Navigation Section */
 
 /* Content Section */
+/* HOME */
+#home {
+    margin-top: 70px;
+}
+/* End HOME */
 h1.header {
     font-size: 40px;
     font-weight: 800;
@@ -184,9 +196,7 @@ h1.header {
 /* Footer Section */
 .footer {
     margin: 0 auto;
-    padding: 20px;;
     color: #000000;
-    box-shadow: 0px 0 5px rgba(0, 0, 0, 0.5);
 }
 /* End Footer Section */
 
