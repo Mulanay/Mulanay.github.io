@@ -42,8 +42,9 @@
 
         .login-form {
             width: 500px;
-            margin: 10px;
+            margin: 15px;
             padding: 10px;
+            box-shadow: 0 7px 6px rgb(0 0 0 / 11%);
         }
 
         .sign-up {
@@ -57,7 +58,7 @@
             margin-top: 20px;
         }
 
-        .mLogo {
+        .mLogo1, .mLogo2 {
             border-radius: 50%;
             border: 1px solid #ffffff;
         }
@@ -67,18 +68,34 @@
             outline: none;
             box-shadow: none;
         }
+
+        @media screen and (max-width: 400px) {
+            .companyName {
+                font-size: 18px;
+            }
+            .mLogo1 {
+                width: 50px;
+            }
+            .mLogo2 {
+                width: 80px;
+            }
+            .form {
+                padding: 10px;
+                padding-top: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="global-container">
-        <div class="card login-form shadow">
+        <div class="card login-form">
             <div class="card-body">
                 <div class="d-flex mb-4 text-center">
-                    <div class="p-2"><img src="./assets/img/Mulanay_Logo.jpg" class="img-fluid mLogo" width="60" /></div>
+                    <div class="p-2"><img src="./assets/img/Mulanay_Logo.jpg" class="img-fluid mLogo1" width="60" /></div>
                     <div class="pt-3 flex-grow-1">
-                        <h3>Mulanay Quezon</h3>
+                        <h3 class="companyName">Mulanay Quezon</h3>
                     </div>
-                    <div class="p-2"><img src="./assets/img/aaHead.jpg" class="img-fluid mLogo" width="100" /></div>
+                    <div class="p-2"><img src="./assets/img/aaHead.jpg" class="img-fluid mLogo2" width="100" /></div>
                 </div>
                 <div class="card-text">
                     <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
