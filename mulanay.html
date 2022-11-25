@@ -27,7 +27,7 @@
                     <div class="p-2">
                         <div class="d-flex flex-column"> 
                             <div>
-                                <b style="color:#1e1b19">Municipality of Mulanay</b> 
+                                <b style="color:#1e1b19"><label class="companyName">Municipality of Mulanay</label></b> 
                                 <br> 
                                 <small class="smallQP">Quezon Province</small>
                             </div>                   
@@ -43,7 +43,7 @@
                 <div class="vr"></div>
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link homeLink" href="#Home">Home</a>
+                        <a class="nav-link" href="#Home">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#Community">Community</a>
@@ -219,10 +219,14 @@
         jQuery(function ($) {
             $("#collapsedClick").click(function () {
                 $(".navbar-nav").removeClass("collapsed");
+                $(".nav-item").removeClass("collapsed");
+                $(".nav-link").removeClass("collapsed");
             });
 
             $("#collapsedClick").click(function () {
-                $(".navbar-nav").addClass("collapsed");
+                $(".navbar-nav").addClass("collapsed");                
+                $(".nav-item").addClass("collapsed");
+                $(".nav-link").addClass("collapsed");
             });
 
             $("#btnLearn").click(function () {
@@ -234,10 +238,8 @@
                 var scrollh = $(this).scrollTop();
                 if (scrollh == 0) {
                     $(".navbar").removeClass("sticky_top_fixed");
-                    $(".homeLink").removeClass("active");
                 } else {
                     $(".navbar").addClass("sticky_top_fixed");
-                    $(".homeLink").addClass("active");
                 }
             });
 
