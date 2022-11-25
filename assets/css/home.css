@@ -267,6 +267,15 @@ h1.header {
         margin: 0 20px;
     }
 }
+@media screen and (max-width: 435px) {
+    .headerContactForm:after, .headerContactForm:before {
+        content: '';
+        width: 100px;
+        height: 1px;
+        background: rgba(0,0,0,0.3);
+        margin: 0 20px;
+    }
+}
 /* End Media Screen Section*/
 
 @font-face {
