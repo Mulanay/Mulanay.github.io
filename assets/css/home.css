@@ -115,7 +115,7 @@ body::-webkit-scrollbar-track-piece:end {
 /* Content Section */
 /* HOME */
 #home {
-    margin-top: 70px;
+    margin-top: 50px;
 }
 /* End HOME */
 h1.header {
@@ -124,10 +124,29 @@ h1.header {
     font-family: 'Clarendon', 'sans-serif';
     text-transform: uppercase;
 }
+.float-right {
+    float: right;
+    text-align: right;
+}
+.float-left {
+    float: left;
+    text-align: left;
+}
 .mayorSection {
     color: #ffffff;
     padding: 20px;
     background-color: #4785d2;
+}
+.covidSection {
+    padding: 30px;
+    background-color: rgba(0,0,0, 0.1);
+}
+.covidText {
+    color: #115272;
+    font-size: 18px;;
+}
+.latestnSection {
+    padding: 30px;
 }
 #btnLearn {
     border: 2px solid #ffffff;
@@ -135,8 +154,6 @@ h1.header {
 .roundedImg {
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    border-right: 6px solid rgba(170,44,34, .8);
-    border-bottom: 6px solid rgba(170,44,34, .8);
 }
 .faSoc a {
     padding: 10px;
