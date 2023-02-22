@@ -10,7 +10,7 @@ const elementI = document.getElementsByClassName('fa fa-lock');
 btn.addEventListener('click', () => {
     // Add animation
     btn.classList.add('animate');
-    btn.innerHTML = 'Loading...';
+    btn.innerHTML = '<img class="img-responsive loading" src="./assets/img/loader.gif"/>&nbsp' + 'Loading...';
     setTimeout(function() {
         elementI.innerHTML = "<i class='fa fa-lock text-white'></i>&nbsp;";
         btn.innerHTML = elementI.innerHTML + 'Secure login';
